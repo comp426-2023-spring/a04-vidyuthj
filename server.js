@@ -40,6 +40,15 @@ app.get('/app/rpsls_function/play', function(req, res) {
 app.get('/app/rps_function/play/:shot', function(req, res) {
     res.status(200).send(rps_function(req.params.shot));
 });
+app.get('/app/rpsls_function/play/:shot', function(req, res) {
+    res.status(200).send(rpsls_function(req.params.shot));
+});
+
+app.get('*',(req, res) => {
+    res.status(404).send('404 NOT FOUND');
+});
+
+app.listen(port);
 
 
 
