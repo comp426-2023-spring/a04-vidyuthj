@@ -1,0 +1,28 @@
+{
+  "name": "a04-vidyuthj",
+  "version": "1.0.0",
+  "description": "A04 assignment web api",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a04-vidyuthj.git"
+  },
+  "keywords": [
+    "web",
+    "api"
+  ],
+  "author": "vidyuthj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a04-vidyuthj/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a04-vidyuthj#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "minimist": "^1.2.8"
+  },
+  "type": "module"
+}
