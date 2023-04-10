@@ -13,34 +13,34 @@ app.use(express.urlencoded({extended: true}));
 app.get('/app', function(req, res) {
     res.status(200).send("200 OK");
 });
-app.get('/app/rps_function', function(req, res) {
+app.get('/app/rps', function(req, res) {
     res.status(200).send(rps_function());
 });
 
-app.get('/app/rpsls_function', function(req, res) {
+app.get('/app/rpsls', function(req, res) {
     res.status(200).send(rpsls_function());
 });
 
-app.get('/app/rps_function/play', function(req, res) {
+app.get('/app/rps/play', function(req, res) {
     res.status(200).send(rps_function(req.query.shot));
 });
 
-app.get('/app/rpsls_function/play', function(req, res) {
+app.get('/app/rpsls/play', function(req, res) {
     res.status(200).send(rpsls_function(req.query.shot));
 });
 
-app.get('/app/rps_function/play', function(req, res) {
+app.get('/app/rps/play', function(req, res) {
     res.status(200).send(rps_function(req.body.shot));
 });
 
-app.get('/app/rpsls_function/play', function(req, res) {
+app.get('/app/rpsls/play', function(req, res) {
     res.status(200).send(rpsls_function(req.body.shot));
 });
 
-app.get('/app/rps_function/play/:shot', function(req, res) {
+app.get('/app/rps/play/:shot', function(req, res) {
     res.status(200).send(rps_function(req.params.shot));
 });
-app.get('/app/rpsls_function/play/:shot', function(req, res) {
+app.get('/app/rpsls/play/:shot', function(req, res) {
     res.status(200).send(rpsls_function(req.params.shot));
 });
 
