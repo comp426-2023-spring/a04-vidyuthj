@@ -1,5 +1,5 @@
-import {rpsls_function } from './lib/lib/rpsls.js';
-import {rps_function} from './lib/lib/rpsls.js';
+import {rpsls_function } from './lib/rpsls.js';
+import {rps_function} from './lib/rpsls.js';
 import express from 'express';
 import minimist from "minimist";
 
