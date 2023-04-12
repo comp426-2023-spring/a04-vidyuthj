@@ -10,18 +10,19 @@ let app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
 app.get('/app', function(req, res) {
     res.status(200).send("200 OK");
 });
 app.get('/app/rps', function(req, res) {
-    res.status(200).send(rps());
+    res.status(200).send(rps(null));
 });
 
 app.get('/app/rpsls', function(req, res) {
-    res.status(200).send(rpsls());
+    res.status(200).send(rpsls(null));
 });
 
-app.get('/app/rps/play', function(req, res) {
+app.get('/app/rps/play/', function(req, res) {
     res.status(200).send(rps(req.query.shot));
 });
 
@@ -29,11 +30,11 @@ app.get('/app/rpsls/play', function(req, res) {
     res.status(200).send(rpsls(req.query.shot));
 });
 
-app.get('/app/rps/play', function(req, res) {
+app.post('/app/rps/play', function(req, res) {
     res.status(200).send(rps(req.body.shot));
 });
 
-app.get('/app/rpsls/play', function(req, res) {
+app.post('/app/rpsls/play', function(req, res) {
     res.status(200).send(rpsls(req.body.shot));
 });
 
